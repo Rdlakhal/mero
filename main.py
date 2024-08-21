@@ -1331,6 +1331,135 @@ Card: XXXXXXXXXXXXXXXX|MM|YYYY|CVV</b>''',parse_mode="HTML")
 	my_thread = threading.Thread(target=my_function)
 	my_thread.start()
 #
+@bot.message_handler(func=lambda message: message.text.lower().startswith('.mvbv') or message.text.lower().startswith('/mvbv'))
+def respond_to_mvbv(message):
+    user_id = message.from_user.id
+    user_name = message.from_user.first_name
+    gate = '3DS Lookup'
+
+    reply_text = "𝐂𝐇𝐄𝐂𝐊𝐈𝐍𝐆 𝐘𝐎𝐔𝐑 𝐂𝐀𝐑𝐃𝐒...⌛"
+    ko = bot.reply_to(message, reply_text).message_id
+
+    try:
+        cc_input = message.reply_to_message.text if message.reply_to_message else message.text
+    except:
+        cc_input = message.text
+
+    cc_list = [str(reg(cc.strip())) for cc in cc_input.split('\n') if reg(cc.strip()) is not None]
+
+    if not cc_list or len(cc_list) > 10:
+        bot.edit_message_text(
+            chat_id=message.chat.id,
+            message_id=ko,
+            text='''<b>🚫 𝐄𝐫𝐫𝐨𝐫!
+𝐏𝐥𝐞𝐚𝐬𝐞 𝐞𝐧𝐭𝐞𝐫 𝐮𝐩 𝐭𝐨 𝟔 𝐜𝐚𝐫𝐝𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐟𝐨𝐫𝐦𝐚𝐭:
+𝐂𝐚𝐫𝐝: XXXXXXXXXXXXXXXX|MM|YY|CVV</b>''',
+            parse_mode="HTML"
+        )
+        return
+
+    decorative_line = "━" * 30
+    results = []
+
+    failed_results = []
+    successful_results = []
+
+    for index, cc in enumerate(cc_list):
+        start_time = time.time()
+        try:
+        	last = str(vbv(cc))
+        except Exception as e:
+            last = 'Error'
+
+        try: 	headers = {
+		'authorization': 'pk_q3mszgnusk66c24k7loecckxtaf',
+		'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+	};json_data = {
+		'type': 'card',
+		'number': cc.split('|')[0],
+		'expiry_month': 5,
+		'expiry_year': 2024,
+		'cvv': '421',
+		'name': 'JOHN HARGROVE',
+		'phone': {},
+		'preferred_scheme': '',
+		'requestSource': 'JS',
+	};data = requests.post('https://api.checkout.com/tokens', headers=headers, json=json_data).json()
+        except: pass
+        try:
+        	brand = data['scheme']
+        except:
+        	brand = 'Unknown'
+        try:
+        	card_type = data['card_type']
+        except:
+        	card_type = 'Unknown'
+        try:
+        	country = data['issuer_country']
+        	country_flag =flagz.by_code(country)
+        except:
+        	country = 'Unknown'
+        	country_flag = 'Unknown'
+        try:
+        	bank = data['issuer']
+        except:
+        	bank = 'Unknown'
+        if 'Authenticate Attempt Successful' in last or 'Authenticate Successful' in last or 'authenticate_successful' in last:
+            msg = f'''<b>𝐏𝐚𝐬𝐬𝐞𝐝 ✅
+
+𝐂𝐚𝐫𝐝 ➜ <code>{cc}</code>
+𝐑𝐞𝐬𝐮𝐥𝐭 ➜ {last}
+𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ➜ {gate}
+	
+𝐁𝐈𝐍 ➜ {cc[:6]} - {card_type} - {brand} 
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ➜ {country} - {country_flag} 
+𝐁𝐚𝐧𝐤 ➜ {bank}
+𝗕𝗼𝘁 𝗕𝘆 @{userdeve}</b>'''
+
+            successful_results.append(msg)
+        else:
+            msg = f'''<b>𝐑𝐞𝐣𝐞𝐜𝐭𝐞𝐝 ❌
+
+𝐂𝐚𝐫𝐝 ➜ <code>{cc}</code>
+𝐑𝐞𝐬𝐮𝐥𝐭 ➜ {last}
+𝐆𝐚𝐭𝐞𝐰𝐚𝐲 ➜ {gate}
+	
+𝐁𝐈𝐍 ➜ {cc[:6]} - {card_type} - {brand} 
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲 ➜ {country} - {country_flag} 
+𝐁𝐚𝐧𝐤 ➜ {bank}
+𝗕𝗼𝘁 𝗕𝘆 @{userdeve}</b>'''
+
+            failed_results.append(msg)
+
+        checked_count = index + 1
+        bot.edit_message_text(
+            chat_id=message.chat.id,
+            message_id=ko,
+            text=f"<b>𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠...⌛</b>\n\n"
+                 f"𝐂𝐡𝐞𝐜𝐤𝐞𝐝: {checked_count}/{len(cc_list)}\n"
+                 f"{decorative_line}\n\n"
+                 f"{msg}",
+            parse_mode="HTML"
+        )
+        time.sleep(1)
+
+    final_msg = f"✅ 𝑭𝒊𝒏𝒊𝒔𝒉𝒆𝒅! 𝑻𝒐𝒕𝒂𝒍 𝒄𝒂𝒓𝒅𝒔 𝒄𝒉𝒆𝒄𝒌𝒆𝒅: {len(cc_list)}\n\n"
+
+    if successful_results:
+        final_msg += f"🟢 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥 𝐂𝐚𝐫𝐝𝐬 ({len(successful_results)}):\n"
+        final_msg += "\n".join(successful_results)
+        final_msg += f"\n\n{decorative_line}\n\n"
+
+    if failed_results:
+        final_msg += f"🔴 𝐅𝐚𝐢𝐥𝐞𝐝 𝐂𝐚𝐫𝐝𝐬 ({len(failed_results)}):\n"
+        final_msg += "\n".join(failed_results)
+
+    bot.edit_message_text(
+        chat_id=message.chat.id,
+        message_id=ko,
+        text=final_msg,
+        parse_mode="HTML"
+    )	
 @bot.message_handler(func=lambda message: message.text.lower().startswith('.fake') or message.text.lower().startswith('/fake'))
 def respond_to_vbv(message):
 	def my_function():
