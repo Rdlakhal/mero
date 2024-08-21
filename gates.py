@@ -4352,7 +4352,7 @@ def au(ccx):
     'variables': {
         'input': {
             'creditCard': {
-                'number': c,
+                'number': n,
                 'expirationMonth': mm,
                 'expirationYear': yy,
                 'cvv': cvc,
