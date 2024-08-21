@@ -4295,7 +4295,6 @@ def au(ccx):
 		yy = yy.split("20")[1]
 	acc = ['mehis41455@givehit.com','wayinod734@polatrix.com','simaxog738@polatrix.com','jelova3747@polatrix.com']
 	email = random.choice(acc)
-	print(F+email)
 	user = user_agent.generate_user_agent()
 	r = requests.session()
 	headers = {'user-agent': user}
