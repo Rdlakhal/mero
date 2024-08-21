@@ -1,0 +1,399 @@
+{
+  "last_cmd": "cvv",
+  "users": 202908,
+  "2134496129": {
+    "plan": "VIP",
+    "timer": "2024-07-03 10:28",
+    "funds": 0,
+    "order": "rec"
+  },
+  "/xc": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Stripe Auth CCN",
+    "def": "xc"
+  },
+  "/stn": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Stripe 5$ CCN",
+    "def": "stn"
+  },
+  "/stc": {
+    "status": "ofline",
+    "typ": "Free",
+    "file": "yes",
+    "name": "unknown Auth CCN",
+    "def": "stc"
+  },
+  "/vip": {
+    "status": "ofline",
+    "typ": "Free",
+    "file": "yes",
+    "name": "unknown Auth",
+    "def": "vip"
+  },
+  "/pro": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Auth 5",
+    "def": "pro"
+  },
+  "/x": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Auth 3",
+    "def": "x"
+  },
+  "/chk": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Auth 1",
+    "def": "chk"
+  },
+  "/sa": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Stripe Auth 4",
+    "def": "sa"
+  },
+  "/cc": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Auth 2",
+    "def": "ccx"
+  },
+  "/pay": {
+    "status": "ofline",
+    "typ": "Free",
+    "file": "yes",
+    "name": "PayPal 0.1$",
+    "def": "pay"
+  },
+  "/pp": {
+    "status": "Online",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "PayPal 1$",
+    "def": "pp"
+  },
+  "/gg": {
+    "status": "Online",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Google Play 0.1$",
+    "def": "gg"
+  },
+  "/sd": {
+    "status": "Online",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Stripe Auth 1",
+    "def": "sd"
+  },
+  "/cn": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree CCN 3$",
+    "def": "cn"
+  },
+  "/sq": {
+    "status": "ofline",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Square Auth 1",
+    "def": "sq"
+  },
+  "/pw": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Payflow Auth",
+    "def": "pw"
+  },
+  "/ch": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree CVV 3$",
+    "def": "ch"
+  },
+  "/sc": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Stripe Auth 3",
+    "def": "scc"
+  },
+  "/br": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree + woocommerce 5$",
+    "def": "br"
+  },
+  "/vbv": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "3DS Lookup",
+    "def": "vbv"
+  },
+  "/be": {
+    "status": "ofline",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Charge 25$",
+    "def": "be"
+  },
+  "/au": {
+    "status": "Online",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree Auth CCN",
+    "def": "au"
+  },
+  "/squ": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Square Auth 2",
+    "def": "sq"
+  },
+  "/auth": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Auth 4",
+    "def": "auth"
+  },
+  "/chg": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree CVV 3$",
+    "def": "chg"
+  },
+  "/cvv": {
+    "status": "Online",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Braintree Auth 6",
+    "def": "cvv"
+  },
+  "/ccn": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree CCN 1$",
+    "def": "ccn"
+  },
+  "/sqq": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Square Auth 3",
+    "def": "sq"
+  },
+  "/sl": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Square Auth 4",
+    "def": "sq"
+  },
+  "/so": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Square Auth 5",
+    "def": "sq"
+  },
+  "/sh": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Square CVV 1$",
+    "def": "sh"
+  },
+  "/st": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Stripe CVV 3$",
+    "def": "st"
+  },
+  "/str": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Stripe CVV 12$",
+    "def": "str"
+  },
+  "/sf": {
+    "status": "ofline",
+    "typ": "Free",
+    "file": "yes",
+    "name": "Stripe Auth 2",
+    "def": "sf"
+  },
+  "/sv": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Stripe CVV 5$",
+    "def": "sv"
+  },
+  "/ka": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Kashier 0.2$",
+    "def": "ka"
+  },
+  "/b3": {
+    "status": "ofline",
+    "typ": "Premium",
+    "file": "yes",
+    "name": "Braintree Auth",
+    "def": "b3"
+  },
+  "2134496149": {
+    "plan": "premium",
+    "timer": "2024-06-19 20:39",
+    "funds": 0,
+    "order": ""
+  },
+  "2134756129": {
+    "plan": "premium",
+    "timer": "2024-06-19 21:55",
+    "funds": 0,
+    "order": ""
+  },
+  "7153200749": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "Merro-7Z4H-PPLH-5G5P": {
+    "plan": "premium",
+    "time": "2024-06-20 19:52"
+  },
+  "2134456129": {
+    "plan": "VIP",
+    "timer": "2024-07-15 04:42",
+    "funds": 0,
+    "order": "stop"
+  },
+  "7405855558": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "7261708364": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "6590159614": {
+    "plan": "VIP",
+    "timer": "2023-12-21 00:46",
+    "funds": 0,
+    "order": ""
+  },
+  "5584050193": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "7153600749": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "7167390633": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "972363052": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "2134456129": {
+    "plan": "VIP",
+    "timer": "2050-07-10 20:35",
+    "funds": 0,
+    "order": ""
+  },
+  "810799455": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "1875307153": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "5533440339": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "6304872434": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "1276912330": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "6747702045": {
+    "plan": "VIP",
+    "timer": "2024-07-15 04:39",
+    "funds": 0,
+    "order": ""
+  },
+  "5818688705": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "6481163712": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  },
+  "5976110749": {
+    "plan": "Free",
+    "timer": "none",
+    "funds": 0,
+    "order": ""
+  }
+}
