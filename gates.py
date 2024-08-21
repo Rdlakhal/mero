@@ -4456,7 +4456,7 @@ def au(ccx):
 	else:
 		if 'Payment method successfully added.' in text or 'Invalid postal code' in text:
 			result = "1000: Approved"
-		elif 'Insufficient Funds' in result
+		elif 'Insufficient Funds' in result:
 			result = "Insufficient Funds"
 		elif 'risk_threshold' in text:
 			result = "RISK: Retry this BIN later."
