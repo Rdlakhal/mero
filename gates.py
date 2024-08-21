@@ -4370,7 +4370,7 @@ def au(ccx):
 }
 
 	response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
-	tok = response.json()['data']['tokenizeCreditCard']['token']
+	token = response.json()['data']['tokenizeCreditCard']['token']
 	
 	headers = {'user-agent': user}
 	json_data = {
