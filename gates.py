@@ -4280,7 +4280,7 @@ def au(ccx):
 	cvc = ccx.split("|")[3]
 	if "20" in yy:
 		yy = yy.split("20")[1]
-	acc = ['mehis41455@givehit.com','wayinod734@polatrix.com','simaxog738@polatrix.com','jelova3747@polatrix.com']
+	acc = ['cotep55150@ndiety.com','kehepew586@ndiety.com','coxey31650@ndiety.com']
 	email = random.choice(acc)
 	user = user_agent.generate_user_agent()
 	r = requests.session()
