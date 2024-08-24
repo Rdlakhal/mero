@@ -1,6 +1,6 @@
 {
     "last_cmd": "cvv",
-    "users": 203007,
+    "users": 203009,
     "2134496129": {
         "plan": "VIP",
         "timer": "2024-07-03 10:28",
@@ -463,10 +463,10 @@
         "order": ""
     },
     "1306399694": {
-        "plan": "Free",
-        "timer": "none",
+        "plan": "VIP",
+        "timer": "2024-08-31 00:01",
         "funds": 0,
-        "order": ""
+        "order": "rec"
     },
     "873717481": {
         "plan": "Free",
@@ -1510,8 +1510,28 @@
         "funds": 0,
         "order": ""
     },
-    "merobot-9NIM-A4KL-KQAU": {
-        "plan": "VIP",
-        "time": "2024-08-24 00:37"
+    "6570245029": {
+        "plan": "Free",
+        "timer": "none",
+        "funds": 0,
+        "order": ""
+    },
+    "7210477670": {
+        "plan": "Free",
+        "timer": "none",
+        "funds": 0,
+        "order": ""
+    },
+    "237308004": {
+        "plan": "Free",
+        "timer": "none",
+        "funds": 0,
+        "order": ""
+    },
+    "7472223007": {
+        "plan": "Free",
+        "timer": "none",
+        "funds": 0,
+        "order": ""
     }
 }
