@@ -666,7 +666,7 @@ Card: XXXXXXXXXXXXXXXX|MM|YYYY|CVV</b>''',parse_mode="HTML")
 			error_type = type(e).__name__
 			er=f'1 An error occurred [ {cmd} ] type error [ {error_type} ] in line [ {line_number} ] '
 			print(er)
-			bot.send_message(2134456129,er)
+			bot.send_message(6265039809,er)
 		except Exception as e:
 			print(e)
 		if 'chk' == cmd or 'cc' == cmd or 'auth' == cmd or 'cvv' == cmd or 'x' == cmd or 'pro' == cmd:
@@ -696,7 +696,7 @@ Card: XXXXXXXXXXXXXXXX|MM|YYYY|CVV</b>''',parse_mode="HTML")
 					line_number = traceback.extract_tb(e.__traceback__)[-1].lineno
 					error_type = type(e).__name__
 					er=f'3 An error occurred [ {cmd} ] type error [ {error_type} ] in line [ {line_number} ] '
-					bot.send_message(2134456129,er)
+					bot.send_message(6265039809,er)
 					print(er)
 				except Exception as e:
 					print(e)
