@@ -28,15 +28,15 @@ cash='01066232052'
 scj = {
 			'file_name': 'xx',
 			'reply_to_message_id': 'xx'}
-admin=2134456129
+admin=6265039809
 files_to_download = {}
 stopuser={}
 files_to_download['4070'] = {
 			'file_name': 'xx',
 			'reply_to_message_id': 'xx'
 		}
-tok='7262605762:AAE7B8pPVjOn5_I2pOtnSdMMyohzz3LxmXk'
-chat_id = 2134456129
+tok='7465647986:AAFg7rMl7CGZ133FCX2LhJRhOlyL2D1SaB8'
+chat_id = 6265039809
 bot = telebot.TeleBot(tok,parse_mode='HTML')
 def down():
 	response = requests.get('https://t.me/merorec/6')
